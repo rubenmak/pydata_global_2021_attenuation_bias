@@ -14658,60 +14658,20 @@ Principal Data Scientist at Greenhouse</h3>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Bias">Bias<a class="anchor-link" href="#Bias">&#182;</a></h2>
+<p><img src="images/bias.png"></p>
 </div>
-</div><div class="fragment">
+</div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>Gender Bias</li>
-</ul>
-
-</div>
-</div></div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>Biased estimator</li>
-</ul>
-
-</div>
-</div></div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>Confounder Bias</li>
-</ul>
-
-</div>
-</div></div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>Biased data</li>
-</ul>
-
-</div>
-</div></div><div class="fragment">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<ul>
-<li>Weights and bias</li>
-</ul>
-
-</div>
-</div></div></section></section><section><section>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Personal-Perspective-on-Bias">Personal Perspective on Bias<a class="anchor-link" href="#Personal-Perspective-on-Bias">&#182;</a></h2><ul>
-<li>Computing something different than you intent to do.</li>
+<h2 id="Perspective-on-bias-for-this-talk">Perspective on bias for this talk<a class="anchor-link" href="#Perspective-on-bias-for-this-talk">&#182;</a></h2><ul>
+<li>Computing something different than you intent to do</li>
 </ul>
 
 </div>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Attenuation-Bias">Attenuation Bias<a class="anchor-link" href="#Attenuation-Bias">&#182;</a></h2><ul>
+<h2 id="Attenuation-bias">Attenuation bias<a class="anchor-link" href="#Attenuation-bias">&#182;</a></h2><ul>
 <li>You want to compute: $\hat{\beta}$ in $y = \alpha + \beta x + \epsilon_y$ </li>
 <li>$\epsilon_y \sim \mathcal{N}(0,\sigma_y)$</li>
 </ul>
@@ -14745,7 +14705,7 @@ Principal Data Scientist at Greenhouse</h3>
 </div></div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
@@ -14772,7 +14732,7 @@ Principal Data Scientist at Greenhouse</h3>
 </div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">print_confidence_interval</span><span class="p">(</span><span class="n">results</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">results</span><span class="o">.</span><span class="n">cov_params</span><span class="p">()[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]))</span>
@@ -14798,7 +14758,7 @@ Principal Data Scientist at Greenhouse</h3>
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>[0.025	0.975]
- 1.225	1.281
+ 1.217	1.273
 𝛽 = 2.5
 </pre>
 </div>
@@ -14807,7 +14767,7 @@ Principal Data Scientist at Greenhouse</h3>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[33]:</div>
 
 
 
@@ -14815,25 +14775,25 @@ Principal Data Scientist at Greenhouse</h3>
 <table class="simpletable">
 <caption>OLS Regression Results</caption>
 <tr>
-  <th>Dep. Variable:</th>            <td>y</td>        <th>  R-squared:         </th> <td>   0.432</td> 
+  <th>Dep. Variable:</th>            <td>y</td>        <th>  R-squared:         </th> <td>   0.429</td> 
 </tr>
 <tr>
-  <th>Model:</th>                   <td>OLS</td>       <th>  Adj. R-squared:    </th> <td>   0.432</td> 
+  <th>Model:</th>                   <td>OLS</td>       <th>  Adj. R-squared:    </th> <td>   0.429</td> 
 </tr>
 <tr>
-  <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   7605.</td> 
+  <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th> <td>   7501.</td> 
 </tr>
 <tr>
-  <th>Date:</th>             <td>Tue, 26 Oct 2021</td> <th>  Prob (F-statistic):</th>  <td>  0.00</td>  
+  <th>Date:</th>             <td>Thu, 28 Oct 2021</td> <th>  Prob (F-statistic):</th>  <td>  0.00</td>  
 </tr>
 <tr>
-  <th>Time:</th>                 <td>08:31:15</td>     <th>  Log-Likelihood:    </th> <td> -21308.</td> 
+  <th>Time:</th>                 <td>14:08:52</td>     <th>  Log-Likelihood:    </th> <td> -21224.</td> 
 </tr>
 <tr>
-  <th>No. Observations:</th>      <td> 10000</td>      <th>  AIC:               </th> <td>4.262e+04</td>
+  <th>No. Observations:</th>      <td> 10000</td>      <th>  AIC:               </th> <td>4.245e+04</td>
 </tr>
 <tr>
-  <th>Df Residuals:</th>          <td>  9998</td>      <th>  BIC:               </th> <td>4.263e+04</td>
+  <th>Df Residuals:</th>          <td>  9998</td>      <th>  BIC:               </th> <td>4.247e+04</td>
 </tr>
 <tr>
   <th>Df Model:</th>              <td>     1</td>      <th>                     </th>     <td> </td>    
@@ -14847,24 +14807,24 @@ Principal Data Scientist at Greenhouse</h3>
     <td></td>       <th>coef</th>     <th>std err</th>      <th>t</th>      <th>P>|t|</th>  <th>[0.025</th>    <th>0.975]</th>  
 </tr>
 <tr>
-  <th>const</th> <td>    6.2069</td> <td>    0.075</td> <td>   82.986</td> <td> 0.000</td> <td>    6.060</td> <td>    6.354</td>
+  <th>const</th> <td>    6.2813</td> <td>    0.075</td> <td>   83.822</td> <td> 0.000</td> <td>    6.134</td> <td>    6.428</td>
 </tr>
 <tr>
-  <th>x1</th>    <td>    1.2529</td> <td>    0.014</td> <td>   87.207</td> <td> 0.000</td> <td>    1.225</td> <td>    1.281</td>
+  <th>x1</th>    <td>    1.2451</td> <td>    0.014</td> <td>   86.610</td> <td> 0.000</td> <td>    1.217</td> <td>    1.273</td>
 </tr>
 </table>
 <table class="simpletable">
 <tr>
-  <th>Omnibus:</th>       <td> 2.825</td> <th>  Durbin-Watson:     </th> <td>   2.015</td>
+  <th>Omnibus:</th>       <td> 1.355</td> <th>  Durbin-Watson:     </th> <td>   2.014</td>
 </tr>
 <tr>
-  <th>Prob(Omnibus):</th> <td> 0.244</td> <th>  Jarque-Bera (JB):  </th> <td>   2.827</td>
+  <th>Prob(Omnibus):</th> <td> 0.508</td> <th>  Jarque-Bera (JB):  </th> <td>   1.359</td>
 </tr>
 <tr>
-  <th>Skew:</th>          <td>-0.030</td> <th>  Prob(JB):          </th> <td>   0.243</td>
+  <th>Skew:</th>          <td>-0.003</td> <th>  Prob(JB):          </th> <td>   0.507</td>
 </tr>
 <tr>
-  <th>Kurtosis:</th>      <td> 2.943</td> <th>  Cond. No.          </th> <td>    19.8</td>
+  <th>Kurtosis:</th>      <td> 2.943</td> <th>  Cond. No.          </th> <td>    20.0</td>
 </tr>
 </table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
 </div>
@@ -15031,7 +14991,7 @@ Principal Data Scientist at Greenhouse</h3>
 </div></div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">odr</span>
@@ -15077,7 +15037,7 @@ Principal Data Scientist at Greenhouse</h3>
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>[0.025	0.975]
- 2.425	2.521
+ 2.455	2.555
 𝛽 = 2.5
 </pre>
 </div>
@@ -15099,7 +15059,7 @@ Principal Data Scientist at Greenhouse</h3>
 </div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[35]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">𝛼</span> <span class="o">=</span> <span class="mi">0</span> 
@@ -15144,7 +15104,7 @@ Principal Data Scientist at Greenhouse</h3>
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>[0.025	0.975]
- 2.139	2.214
+ 2.145	2.221
 𝛽 = 2.5
 </pre>
 </div>
@@ -15157,7 +15117,7 @@ Principal Data Scientist at Greenhouse</h3>
 </div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">𝛼</span> <span class="o">=</span> <span class="mi">0</span> 
@@ -15202,7 +15162,7 @@ Principal Data Scientist at Greenhouse</h3>
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>[0.025	0.975]
- 2.393	2.486
+ 2.440	2.538
 𝛽 = 2.5
 </pre>
 </div>
@@ -15261,7 +15221,7 @@ Principal Data Scientist at Greenhouse</h3>
 </div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[37]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/geo_data_1.csv&#39;</span><span class="p">)</span>
@@ -15281,7 +15241,7 @@ Principal Data Scientist at Greenhouse</h3>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[37]:</div>
 
 
 
@@ -15418,14 +15378,14 @@ Principal Data Scientist at Greenhouse</h3>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>Having an error $\sigma_x$ implies $p_x$</li>
+<li>Knowing $\sigma_x$ implies $p_x$</li>
 </ul>
 
 </div>
 </div></div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[38]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/geo_data_2.csv&#39;</span><span class="p">)</span>
@@ -15445,7 +15405,7 @@ Principal Data Scientist at Greenhouse</h3>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[38]:</div>
 
 
 
@@ -15518,7 +15478,7 @@ Principal Data Scientist at Greenhouse</h3>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Intuition">Intuition<a class="anchor-link" href="#Intuition">&#182;</a></h2><ul>
-<li>Geo's aren't fully treated / non-treated, but 'partly treated'</li>
+<li>Geo's aren't fully treated / non-treated, but 'partly treated / non-treated'</li>
 </ul>
 
 </div>
@@ -15530,7 +15490,7 @@ Principal Data Scientist at Greenhouse</h3>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[39]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
@@ -15574,7 +15534,7 @@ Principal Data Scientist at Greenhouse</h3>
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>[0.025	0.975]
- 1.615	1.722
+ 1.711	1.816
 𝛽 = 2.5
 </pre>
 </div>
@@ -15587,7 +15547,7 @@ Principal Data Scientist at Greenhouse</h3>
 </div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[40]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
@@ -15635,7 +15595,7 @@ Principal Data Scientist at Greenhouse</h3>
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>[0.025	0.975]
- 2.478	2.627
+ 2.388	2.538
 𝛽 = 2.5
 </pre>
 </div>
@@ -15648,7 +15608,7 @@ Principal Data Scientist at Greenhouse</h3>
 </div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[41]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">𝛼</span> <span class="o">=</span> <span class="mi">0</span> 
@@ -15695,7 +15655,7 @@ Principal Data Scientist at Greenhouse</h3>
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>[0.025	0.975]
- 3.493	3.646
+ 3.494	3.648
 𝛽 = 2.5
 𝜎𝑥 = 0.357
 </pre>
@@ -15729,6 +15689,7 @@ Principal Data Scientist at Greenhouse</h3>
 <li>When imputing missing data:<ul>
 <li>Andrew Gelman suggests adding noise to make imputed data more realistic (Data Analysis Using Regression and Multilevel/Hierarchical Models)</li>
 <li>If you use the imputed variable for inference, you'll be introducing double attenuation bias!</li>
+<li>For binary variables, impute $p_x$ instead</li>
 </ul>
 </li>
 </ul>
